@@ -1,0 +1,16 @@
+{
+  "name": "data-structure-algorythm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon index.js --prefix linkedList",
+    "start": "node index.js --prefix linkedList"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
