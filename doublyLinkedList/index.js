@@ -1,3 +1,4 @@
+
 //change script section in package.json to run this ;)//
 
 class Node{
@@ -81,5 +82,5 @@ myDoublyLinkedList.push(15)
 myDoublyLinkedList.push(22)
 // myDoublyLinkedList.pop()
 // myDoublyLinkedList.unshift(4)
-// myDoublyLinkedList.shift()
+//  
 //  console.log(myDoublyLinkedList)
