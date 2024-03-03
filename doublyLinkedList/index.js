@@ -116,8 +116,17 @@ class DoublyLinkedList{
     }
     remove(index){
         if(index === 0) return this.shift()
-        if(index === this.length) return this.pop()
+        if(index === this.length-1) return this.pop()
         if( index < 0 || index > this.length) return undefined 
+
+        let temp = this.get(index)
+        temp.next.prev = temp.prev
+        temp.prev.next = temp.next
+        temp.next = null
+        temp.prev = null
+
+        this.length--
+        return temp
          
     }
 
@@ -146,5 +155,7 @@ myDoublyLinkedList.push(22)
 // myDoublyLinkedList.insert(2,66)
 // myDoublyLinkedList.insert(3,66)
 // myDoublyLinkedList.insert(10,66)
+
+// console.log(`remove index 1`, myDoublyLinkedList.remove(1))
 
 console.log(myDoublyLinkedList)
