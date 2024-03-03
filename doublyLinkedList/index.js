@@ -10,6 +10,7 @@ class Node{
 }
 
 class DoublyLinkedList{
+
     constructor(value){
         let newNode = new Node(value)
         this.head = newNode
@@ -97,6 +98,28 @@ class DoublyLinkedList{
         }
         return false
     }
+    insert(index , value){
+        if(index === 0) return this.unshift(value)
+        if(index === this.length) return this.push(value)
+        if( index < 0 || index > this.length) return undefined 
+
+        let newNode = new Node(value)
+        let before = this.get(index - 1)
+        let after = before.next
+        newNode.next = before.next
+        before.next = newNode
+        newNode.prev = after.prev
+        after.prev = newNode 
+
+        this.length++
+        return true
+    }
+    remove(index){
+        if(index === 0) return this.shift()
+        if(index === this.length) return this.pop()
+        if( index < 0 || index > this.length) return undefined 
+         
+    }
 
 }
 
@@ -116,5 +139,12 @@ myDoublyLinkedList.push(22)
 // console.log(myDoublyLinkedList.get(1))
 
 // myDoublyLinkedList.set(1,100)
+// console.log(`doesn't exists return`,myDoublyLinkedList.set(8,4))
 
- console.log(myDoublyLinkedList)
+// myDoublyLinkedList.insert(0,66)
+// myDoublyLinkedList.insert(1,66)
+// myDoublyLinkedList.insert(2,66)
+// myDoublyLinkedList.insert(3,66)
+// myDoublyLinkedList.insert(10,66)
+
+console.log(myDoublyLinkedList)
