@@ -1,3 +1,5 @@
+//change script section in package.json to run this ;)//
+
 class Node{
     constructor(value){
         this.value = value
