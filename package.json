@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon index.js --prefix doublyLinkedList",
-    "start": "node index.js --prefix doublyLinkedList"
+    "watch": "nodemon index.js --prefix stack",
+    "start": "node index.js --prefix stack"
   },
   "keywords": [],
   "author": "",
