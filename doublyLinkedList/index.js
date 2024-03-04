@@ -1,5 +1,6 @@
-
-//change script section in package.json to run this ;)//
+//change script section folder name in package.json to run this ;)//
+//npm install ( to install nodemon and go live )
+//npm run watch
 
 class Node{
     constructor(value){
