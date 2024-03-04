@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon index.js --prefix stack",
-    "start": "node index.js --prefix stack"
+    "watch": "nodemon index.js --prefix queue",
+    "start": "node index.js --prefix queue"
   },
   "keywords": [],
   "author": "",
