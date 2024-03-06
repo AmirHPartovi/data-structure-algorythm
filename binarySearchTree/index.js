@@ -41,7 +41,19 @@ class BST{
             }
         }
     }
-
+    contain(value){
+        if (this.root === null) return false
+        let temp = this.root
+        while(temp){
+            if(value < temp.value){
+                temp = temp.left
+            }else if(value > temp.value){
+                temp = temp.right
+            }else return true
+        }
+        return false
+        
+    }
 }
 
 let myBST = new BST()
@@ -50,5 +62,6 @@ myBST.insert(11)
 myBST.insert(8)
 myBST.insert(9)
 myBST.insert(12)
-
 console.log(myBST)
+console.log(`my BST Contain 4`,myBST.contain(4))
+console.log(`my BST Contain 12`,myBST.contain(12))
