@@ -54,6 +54,18 @@ class BST{
         return false
         
     }
+    minValueNode(currentNode){
+        while( currentNode.left != null){
+            currentNode = currentNode.left
+        }
+        return currentNode
+    }
+    maxValueNode(currentNode){
+        while( currentNode.right != null){
+            currentNode = currentNode.right
+        }
+        return currentNode
+    }
 }
 
 let myBST = new BST()
@@ -65,3 +77,5 @@ myBST.insert(12)
 console.log(myBST)
 console.log(`my BST Contain 4`,myBST.contain(4))
 console.log(`my BST Contain 12`,myBST.contain(12))
+console.log(`my BST min value`,myBST.minValueNode(myBST.root))
+console.log(`my BST max value`,myBST.maxValueNode(myBST.root))
