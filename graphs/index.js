@@ -33,6 +33,15 @@ class Graph{
         }
         return false
     }
+    removeVertex(vertex){
+        if(!this.adjacencyList[vertex]) return undefined 
+        while(this.adjacencyList[vertex]?.length){
+            let temp = this.adjacencyList[vertex].pop()
+            this.removeEdge(temp , vertex )
+        }
+        delete this.adjacencyList[vertex]
+        return this
+    }
 }
 
 let myGraph = new Graph()
@@ -40,11 +49,17 @@ let myGraph = new Graph()
 myGraph.addVertex('a')
 myGraph.addVertex('b')
 myGraph.addVertex('d')
+myGraph.addVertex('e')
 myGraph.addVertex('a')
+
 myGraph.addEdge('a','b') 
 myGraph.addEdge('d','b') 
-myGraph.addEdge('c ','b') 
+myGraph.addEdge('e','b') 
+myGraph.addEdge('c ','b')
+
 myGraph.removeEdge('a','c')
 myGraph.removeEdge('a','b')
+
+myGraph.removeVertex('e')
 
 console.log(`my Graph`,myGraph)
