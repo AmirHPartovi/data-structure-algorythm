@@ -43,9 +43,46 @@ function insertionSort(array){
     return array
 }
 
+//merge sort
+
+function merge(arr1 ,arr2){
+    let combined = []
+    let i = 0
+    let j = 0
+    while( i < arr1.length && j < arr2.length){
+        if(arr1[i]  < arr2[j]){
+            combined.push(arr1[i])
+            i++
+        }else{
+            combined.push(arr2[j])
+            j++
+        }
+    }while( i < arr1.length){
+        combined.push(arr1[i])
+        i++
+    }
+    while( j < arr2.length){
+        combined.push(arr1[j])
+        j++
+    }
+    
+    return combined
+} 
+function mergeSort(array){
+    if(array.length === 1) return array
+    
+    let mid = Math.floor(array.length/2)
+    let left = array.slice(0,mid)
+    let right = array.slice(mid)
+
+    return merge(mergeSort(left),mergeSort(right))
+}
+
 
 let arr1=[1 , 6, 9, 3, 8 ,55 ,23 ,90 , 4 ,12 , 18 , 1 , 7 , 15]
 
 console.log(`bubble sort result : ` ,bubbleSort(arr1))
 console.log(`selection  sort result : ` ,selectionSort(arr1))
 console.log(`insertion  sort result : ` ,insertionSort(arr1))
+console.log(`merge function (not sorted ) result : ` ,merge(arr1,[5,8,2,1,0,9,0,3,7]))
+console.log(`merge sort result : ` ,mergeSort(arr1))
