@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon index.js --prefix itemInCommonArray",
-    "start": "node index.js --prefix itemInCommonArray"
+    "watch": "nodemon index.js --prefix graphs",
+    "start": "node index.js --prefix graphs"
   },
   "keywords": [],
   "author": "",
