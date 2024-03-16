@@ -28,6 +28,17 @@ class HashTable{
         }
         return undefined
     }
+    keys(){
+        let keysArray = []
+        for( let i = 0 ; i < this.dataMap.length ; i++){
+            if(this.dataMap[i]){
+                for( let j = 0 ; j < this.dataMap[i]?.length ; i++){
+                    keysArray.push(this.dataMap[i][j][0])
+                }
+            }
+        }
+        return keysArray
+    }
 }
 
 const myHashTable = new HashTable()
@@ -41,4 +52,6 @@ myHashTable.set('laptop' , 1500)
 console.log(`myHashTable` , myHashTable)
 console.log(`getMethod for passport` , myHashTable.get('passport')) 
 console.log(`getMethod for creditCard` , myHashTable.get('creditCard')) 
-console.log(`getMethod for invalid` , myHashTable.get('invalid')) 
+console.log(`getMethod for invalid` , myHashTable.get('invalid'))
+
+console.log(`keysMethod  = allKeys` , myHashTable.keys()) 
