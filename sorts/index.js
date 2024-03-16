@@ -31,8 +31,21 @@ function selectionSort(array){
     return array
 }
 
+function insertionSort(array){
+    let temp , j
+    for(let i = 1 ; i < array.length ; i++){
+        temp = array[i]
+        for(j = i-1 ; array[j] > temp && j > -1 ;j--){
+            array[j+1] = array[j]
+        }
+        array[j+1] = temp
+    }
+    return array
+}
+
 
 let arr1=[1 , 6, 9, 3, 8 ,55 ,23 ,90 , 4 ,12 , 18 , 1 , 7 , 15]
 
 console.log(`bubble sort result : ` ,bubbleSort(arr1))
 console.log(`selection  sort result : ` ,selectionSort(arr1))
+console.log(`insertion  sort result : ` ,insertionSort(arr1))
