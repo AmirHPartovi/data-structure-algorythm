@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon index.js --prefix graphs",
-    "start": "node index.js --prefix graphs"
+    "watch": "nodemon index.js --prefix sorts",
+    "start": "node index.js --prefix sorts"
   },
   "keywords": [],
   "author": "",
