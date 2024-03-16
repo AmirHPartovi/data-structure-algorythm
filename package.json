@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon index.js --prefix binarySearchTree",
-    "start": "node index.js --prefix binarySearchTree"
+    "watch": "nodemon index.js --prefix hashTable",
+    "start": "node index.js --prefix hashTable"
   },
   "keywords": [],
   "author": "",
