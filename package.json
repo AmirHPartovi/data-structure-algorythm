@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon index.js --prefix hashTable",
-    "start": "node index.js --prefix hashTable"
+    "watch": "nodemon index.js --prefix itemInCommonArray",
+    "start": "node index.js --prefix itemInCommonArray"
   },
   "keywords": [],
   "author": "",
