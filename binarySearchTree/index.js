@@ -101,6 +101,17 @@ class BST{
         traverse(this.root)
         return result
     }
+    DFSInOrder(){
+        let result = []
+        function traverse(currentNode){
+            if(currentNode.left) traverse(currentNode.left)
+            result.push(currentNode.value)
+            if(currentNode.right) traverse(currentNode.right)
+        }
+        traverse(this.root)
+        return result
+    }
+    
 }
 
 let myBST = new BST()
@@ -117,3 +128,4 @@ console.log(`my BST max value`,myBST.maxValueNode(myBST.root))
 console.log(`my BFS Tree Traverse`,myBST.BFS( ))
 console.log(`my DFS PreOrder Tree Traverse`,myBST.DFSPreOrder( ))
 console.log(`my DFS PostOrder Tree Traverse`,myBST.DFSPostOrder( ))
+console.log(`my DFS InOrder Tree Traverse`,myBST.DFSInOrder( ))
