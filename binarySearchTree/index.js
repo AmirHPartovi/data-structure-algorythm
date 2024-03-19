@@ -81,6 +81,26 @@ class BST{
         
         return result
     }
+    DFSPreOrder(){
+        let result = []
+        function traverse(currentNode){
+            result.push(currentNode.value)
+            if(currentNode.left) traverse(currentNode.left)
+            if(currentNode.right) traverse(currentNode.right)
+        }
+        traverse(this.root)
+        return result
+    }
+    DFSPostOrder(){
+        let result = []
+        function traverse(currentNode){
+            if(currentNode.left) traverse(currentNode.left)
+            if(currentNode.right) traverse(currentNode.right)
+            result.push(currentNode.value)
+        }
+        traverse(this.root)
+        return result
+    }
 }
 
 let myBST = new BST()
@@ -95,3 +115,5 @@ console.log(`my BST Contain 12`,myBST.contain(12))
 console.log(`my BST min value`,myBST.minValueNode(myBST.root))
 console.log(`my BST max value`,myBST.maxValueNode(myBST.root))
 console.log(`my BFS Tree Traverse`,myBST.BFS( ))
+console.log(`my DFS PreOrder Tree Traverse`,myBST.DFSPreOrder( ))
+console.log(`my DFS PostOrder Tree Traverse`,myBST.DFSPostOrder( ))
