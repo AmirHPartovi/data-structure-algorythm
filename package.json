@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon index.js --prefix sorts",
-    "start": "node index.js --prefix sorts"
+    "watch": "nodemon index.js --prefix binarySearchTree",
+    "start": "node index.js --prefix binarySearchTree"
   },
   "keywords": [],
   "author": "",

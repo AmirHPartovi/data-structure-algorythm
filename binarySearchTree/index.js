@@ -66,6 +66,21 @@ class BST{
         }
         return currentNode
     }
+    BFS(){
+        let currentNode = this.root
+        let queue =[]
+        let result = []
+
+        queue.push(currentNode)
+        while(queue.length){
+            currentNode = queue.shift()
+            result.push(currentNode.value)
+            if(currentNode.left) queue.push(currentNode.left)
+            if(currentNode.right) queue.push(currentNode.right)
+        }
+        
+        return result
+    }
 }
 
 let myBST = new BST()
@@ -79,3 +94,4 @@ console.log(`my BST Contain 4`,myBST.contain(4))
 console.log(`my BST Contain 12`,myBST.contain(12))
 console.log(`my BST min value`,myBST.minValueNode(myBST.root))
 console.log(`my BST max value`,myBST.maxValueNode(myBST.root))
+console.log(`my BFS Tree Traverse`,myBST.BFS( ))
